@@ -1,0 +1,10 @@
+import { BookModel } from "./bookModel";
+import { Category } from "./category";
+
+export const BOOKS: BookModel[] = [
+    {name: "The richest man in Babylon", description: "The author of this book is confident: in order to fulfill all your plans and desires, you must first of all achieve success in money matters, using the principles of personal finance management set forth in its pages.", price: 549, category: Category.BIOGRAPHY, createDate: 2021, isAvailable: true},
+    {name: "Sapiens. A Brief History of Humanity", description: "One hundred thousand years ago, Homo sapiens was one of at least six human species living on this planet—an unremarkable animal that played no more role in the ecosystem than gorillas, fireflies or jellyfish. But about seventy thousand years ago, a mysterious change in the cognitive abilities of Homo sapiens turned him into a master of the planet and an ecosystem nightmare.", price: 510, category: Category.NON_FICTION, createDate: 2016, isAvailable: false},
+    {name: "Anna Karenina", description: "“Anna Karenina” is a classic of world literature, a novel written by Leo Tolstoy, a tragic story about love and happiness that crashed against the harsh walls of reality, social foundations and stereotypes.", price: 211, category: Category.FICTION, createDate: 2008, isAvailable: true},
+    {name: "How I became a dragon", description: "This is a book about myself and how I actually (I mean, really, 100%, trully, 4sure) became a dragon", price: 150, category: Category.NON_FICTION, createDate: 2023, isAvailable: false},
+    {name: "Faust", description: "Doctor Johann Faustus was a German alchemist of the first half of the 16th century, whose fame as a “great warlock” was so grandiose that popular rumor created a bizarre legend about him. This legend became part of European folklore and inspired many writers, both Renaissance and modern, but none of them managed to rise to the heights of Goethe.", price: 229, category: Category.PHILOSOPHY, createDate: 2016, isAvailable: true}
+];

@@ -1,0 +1,30 @@
+<a class="card">
+    <div>
+        <h2>All the books available</h2>
+        <ul class="books">
+            <li *ngFor="let book of books">
+                <div>
+                    <span>Book Name: {{book.name | uppercase}}</span>
+                </div><br>
+                <div>
+                    <span>Book Description: {{book.description}}</span>
+                </div><br>
+                <div>
+                    <span>Book Price: {{book.price}}</span>
+                </div><br>
+                <div>
+                    <span>Book Category: {{book.category}}</span>
+                </div><br>
+                <div>
+                    <span>Book Creation Year: {{book.createDate}}</span>
+                </div><br>
+                <div>
+                    <span>is Book Available: {{book.isAvailable}}</span>
+                </div><br>
+
+                <label for="buyButton"><b>Purchase this book -> </b></label>
+                <button type="button" id="buyButton" (click)="onBuy(book)">Buy</button><br>
+            </li>
+        </ul>
+    </div>
+ </a>
