@@ -12,7 +12,7 @@ export class AppComponent {
   bookLibrary = BOOKS;
   clickedBookName = "";
 
-  onBuy(book: BookModel) {
+  buy(book: BookModel) {
     this.clickedBookName = book.name;
   }
 }

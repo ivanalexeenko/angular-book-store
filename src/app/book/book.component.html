@@ -4,26 +4,27 @@
         <ul class="books">
             <li *ngFor="let book of books;let bookId=index">
                 <div>
-                    <span>Book Name: {{book.name | uppercase}}</span>
+                    <span><b>Book Name:</b> {{book.name | uppercase}}</span>
                 </div><br>
                 <div>
-                    <span>Book Description: {{book.description}}</span>
+                    <span><b>Book Description:</b> {{book.description}}</span>
                 </div><br>
                 <div>
-                    <span>Book Price: {{book.price}}</span>
+                    <span><b>Book Price:</b> {{book.price}}</span>
                 </div><br>
                 <div>
-                    <span>Book Category: {{book.category}}</span>
+                    <span><b>Book Category:</b> {{book.category}}</span>
                 </div><br>
                 <div>
-                    <span>Book Creation Year: {{book.createDate}}</span>
+                    <span><b>Book Creation Year:</b> {{book.createDate}}</span>
                 </div><br>
-                <div>
-                    <span>is Book Available: {{book.isAvailable}}</span>
-                </div><br>
+                <div *ngIf="!book.isAvailable">
+                    <span><b>Book is not available right now</b></span>
+                </div>
 
-                <label for="buyButton"><b>Purchase this book -> </b></label>
-                <button type="button" id="buyButton-{{bookId}}" (click)="onBuy(book)">Buy</button><br>
+                <div *ngIf="book.isAvailable">
+                    <button type="button" id="buyButton-{{bookId}}" (click)="onBuy(book)">Buy</button>
+                </div>
             </li>
         </ul>
     </div>

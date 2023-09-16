@@ -341,7 +341,7 @@
   </div>
 
   <div class="card-container">
-    <app-book [books]="bookLibrary" (onBuyBookEvent)="onBuy($event)"></app-book>
+    <app-book [books]="bookLibrary" (onBuyBookEvent)="buy($event)"></app-book>
   </div>
 
   <div *ngIf="clickedBookName">
