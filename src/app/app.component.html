@@ -344,8 +344,8 @@
     <app-book [books]="bookLibrary" (onBuyBookEvent)="buy($event)"></app-book>
   </div>
 
-  <div *ngIf="clickedBookName">
-    <b>Book clicked: {{clickedBookName}}</b>
+  <div class="card-container">
+    <app-cart [cart]="cart"></app-cart>
   </div>
 
   <!-- Footer -->

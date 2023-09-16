@@ -1,0 +1,13 @@
+<h2>Cart:</h2>
+<div *ngIf="!cart.cartItems || cart.cartItems.length == 0">
+    <h2>Cart is empty</h2>
+
+</div>
+<div *ngIf="cart.cartItems && cart.cartItems.length != 0">
+    <h2>Cart Items:</h2>
+    <ul>
+        <li *ngFor="let cartItem of cart.cartItems">
+            <app-cart-item [cartItem]="cartItem"></app-cart-item>
+        </li>
+    </ul>
+</div>
