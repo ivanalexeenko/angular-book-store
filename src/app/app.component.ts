@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BOOKS } from './library-books';
+import { BookModel } from './bookModel';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bookShop';
+  bookLibrary = BOOKS;
+  clickedBookName = "";
+
+  onBuy(book: BookModel) {
+    this.clickedBookName = book.name;
+  }
 }

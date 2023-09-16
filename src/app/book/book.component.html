@@ -1,8 +1,8 @@
 <a class="card">
-    <div>
-        <h2>All the books available</h2>
+    <div *ngIf="books">
+        <h2>All the books we have in library</h2>
         <ul class="books">
-            <li *ngFor="let book of books">
+            <li *ngFor="let book of books;let bookId=index">
                 <div>
                     <span>Book Name: {{book.name | uppercase}}</span>
                 </div><br>
@@ -23,7 +23,7 @@
                 </div><br>
 
                 <label for="buyButton"><b>Purchase this book -> </b></label>
-                <button type="button" id="buyButton" (click)="onBuy(book)">Buy</button><br>
+                <button type="button" id="buyButton-{{bookId}}" (click)="onBuy(book)">Buy</button><br>
             </li>
         </ul>
     </div>

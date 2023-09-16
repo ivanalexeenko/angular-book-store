@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { BookModel } from '../bookModel';
-import { Category } from '../category';
-import { BOOKS } from '../library-books';
 
 @Component({
   selector: 'app-book',
@@ -9,9 +7,11 @@ import { BOOKS } from '../library-books';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent {
-  books = BOOKS;
+  @Input() books: BookModel[] = [];
 
-  onBuy(book: BookModel): void {
-    
+  @Output() onBuyBookEvent = new EventEmitter<BookModel>;
+
+  onBuy(book: BookModel) {
+    this.onBuyBookEvent.emit(book);
   }
 }
