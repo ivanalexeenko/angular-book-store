@@ -2,4 +2,19 @@
     <div><span>Book: {{cartItem.book.name}}</span></div>
     <div><span>Added Amount: {{cartItem.quantity}}</span></div>
     <br>
+    <div class="input-group quantity-selector">
+        <button type="button" [disabled]="cartItem.quantity <= 1" (click)="onQuantityDecrease(cartItem)" class="cart-item-box">
+            <i>-</i>
+        </button>
+
+        <input type="number" id="inputQuantity" class="cart-item-box" style="text-align: center;" disabled="true" name="quantity" value="{{cartItem.quantity}}" min="0" step="1">
+
+        <button type="button" (click)="onQuantityIncrease(cartItem)" class="cart-item-box">
+            <i>+</i>
+        </button>
+
+        <button type="button" (click)="onRemove(cartItem)" class="cart-item-box">
+            <i>Remove</i>
+        </button>
+    </div>
 </div>

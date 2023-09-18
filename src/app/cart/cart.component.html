@@ -7,7 +7,7 @@
     <h2>Cart Items:</h2>
     <ul>
         <li *ngFor="let cartItem of cart.cartItems">
-            <app-cart-item [cartItem]="cartItem"></app-cart-item>
+            <app-cart-item [cartItem]="cartItem" (decreaseQuantityEvent)="decreaseItemQuantity($event)" (increaseQuantityEvent)="increaseItemQuantity($event)" (removeEvent)="removeItem($event)"></app-cart-item>
         </li>
     </ul>
 </div>
